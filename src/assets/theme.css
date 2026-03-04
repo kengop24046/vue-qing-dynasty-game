@@ -1,0 +1,126 @@
+/* 全局主题变量 */
+:root {
+  /* 主色调 */
+  --primary-red: #8B0000;
+  --secondary-red: #DC143C;
+  --dark-red: #B22222;
+  /* 金色系 */
+  --primary-gold: #FFD700;
+  --secondary-gold: #FFA500;
+  --light-gold: #FFF8DC;
+  --dark-gold: #B8860B;
+  /* 功能色 */
+  --success: #4CAF50;
+  --danger: #f44336;
+  --warning: #FFC107;
+  --info: #2196F3;
+  /* 背景色 */
+  --bg-dark: rgba(0, 0, 0, 0.3);
+  --bg-light: rgba(255, 215, 0, 0.1);
+  --bg-hover: rgba(255, 215, 0, 0.2);
+  /* 边框 */
+  --border-gold: 2px solid #FFD700;
+  --border-radius-sm: 8px;
+  --border-radius-md: 12px;
+  --border-radius-lg: 16px;
+  /* 阴影 */
+  --shadow-gold: 0 4px 12px rgba(255, 215, 0, 0.4);
+  --shadow-dark: 0 4px 8px rgba(0, 0, 0, 0.3);
+  /* 动画 */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease;
+}
+
+/* 全局样式重置 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  font-family: 'Microsoft YaHei', 'SimHei', 'PingFang SC', sans-serif;
+  line-height: 1.5;
+}
+
+/* 滚动条美化 */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-gold);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary-gold);
+}
+
+/* 通用布局类 */
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+/* 通用文本样式 */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  color: var(--primary-gold);
+  line-height: 1.3;
+}
+
+p {
+  color: var(--light-gold);
+}
+
+/* 禁用选中 */
+.no-select {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
